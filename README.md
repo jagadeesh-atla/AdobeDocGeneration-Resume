@@ -99,16 +99,6 @@ Same Request
 }
 ```
 
-#### GET /api/templates/count
-
-**Response** : A JSON object with total number of templates available.
-
-```json
-{
-  "count": 1
-}
-```
-
 #### GET /api/image/:id
 
 **Response** : Image with whose id is `:id`.
@@ -174,6 +164,10 @@ This API is deployed using docker on render platform(Link in about).
 
 In this project, templates are stored within the server for better accessability and speed. You can refer logic for using MongoDB is [here](https://github.com/jagadeesh-atla/resumeBuilder-mongodb).
 
+## Tests
+
+Test the application with `mocha` - run `npm run test`.
+
 ## Folder Structure
 
 ```bash
@@ -199,9 +193,13 @@ In this project, templates are stored within the server for better accessability
 │   ├── server.js
 │   ├── uploads
 │   │   ├── images
-│   │   │   └── image0001.jpeg
+│   │   |   ├── image0001.jpeg
+│   │   |   ├── image0002.jpeg
+│   │   │   └── image0003.jpeg
 │   │   └── templates
-│   │       └── template0001.docx
+│   │   |   ├── tmplate0001.docx
+│   │   |   ├── template0002.docx
+│   │   │   └── template0003.docx
 │   └── utils
 │       ├── _image.js
 │       ├── deleteFiles.js
@@ -210,6 +208,11 @@ In this project, templates are stored within the server for better accessability
 │       ├── libreOfficeImage.js
 │       ├── numOfFiles.js
 │       └── outputName.js
+├── test
+│   ├── index.test.js
+│   ├── test.docx
+│   ├── test.json
+│   └── testLog.txt
 └── views
     └── index.ejs
 
