@@ -6,10 +6,12 @@
   "scripts": {
     "dev": "nodemon server/server.js",
     "start": "node server/server.js",
-    "test": "mocha"
+    "test": "mocha -t 100000"
   },
   "devDependencies": {
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "expect": "^29.6.1",
+    "supertest": "^6.3.3"
   },
   "dependencies": {
     "@adobe/pdfservices-node-sdk": "^3.4.1",
